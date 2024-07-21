@@ -1,0 +1,155 @@
+import turtle # import the library of commands that you'd like to use
+import math, random 
+turtle.colormode(255) # so you can use standar RGB values, 0-255
+
+# Create a panel to draw on. 
+win = turtle.Screen()
+w = 750 # width of panel
+h = 750 # height of panel
+win.setup(width=w, height=h) #600 x 600 is a decent size to work on. 
+#You can experiment by making it the size of your screen or super tiny!
+
+#====================================================== Your code ======================================================
+palette= [(0, 0, 0), (249, 65, 68), (144, 190, 109), (249, 199, 79), (39, 125, 161)]
+
+# draws big green circle
+circle=turtle.Turtle(visible=False)
+circle.shape("circle")
+circle.up() # pick up pen
+circle.color(144, 190, 109) # fill color 
+circle.down() # put pen down
+circle.begin_fill() # fill in the circle with g
+circle.circle(250) # draw a circle
+circle.end_fill() 
+
+# draws red circle in upper left area of the big green circle
+circle.up() # pick up pen
+circle.goto(-100, 300) # move to (-125, 350)
+circle.color((0, 0, 0),(249, 65, 68)) # # change outline to black, fill color to red
+circle.down() # put pen down
+circle.begin_fill() # fill in circle with (249, 65, 68)
+circle.circle(50)
+circle.end_fill()
+
+# draws small black circle in the middle of bigger red circle
+circle.up() # pick up pen
+circle.goto(-100, 335) # move to (-125, 350)
+circle.color("black") # fill color to black
+circle.down() # put pen down
+circle.begin_fill() # fill in circle with black
+circle.circle(15)
+circle.end_fill()
+
+# draws medium sized yellow circle at the bottom of big green circle
+circle.up() # pick up pen
+circle.goto(200, -175) # move to (200, -175)
+circle.down() # put pen down
+circle.color(249, 199, 79) # fill color to (249, 199, 79)
+circle.begin_fill() # fill in the circle with (249, 199, 79)
+circle.circle(150)
+circle.end_fill()
+
+# draws medium sized red circle with black outline in bottom left
+circle.up() # pick up pen
+circle.goto(-150, 75 ) # move to (-150, 75)
+circle.down() # put pen down
+circle.color((0, 0, 0),(249, 65, 68)) # change outline to black, fill color to red
+circle.begin_fill() # fill in the circle with red
+circle.circle (-120)
+circle.end_fill()
+
+# copied original to make stripes go through red & yellow circles
+stripe=turtle.Turtle(visible=False)
+stripe.pensize(2)
+stripe.left(150)
+stripe.forward(500)
+stripe=turtle.Turtle(visible=False)
+stripe.pensize(2)
+stripe.left(150)
+stripe.backward(500)
+
+# copied orginial to make stripes go through red & yellow circles
+stripe=turtle.Turtle(visible=False)
+stripe.pensize(1)
+stripe.left(175)
+stripe.forward(450)
+stripe=turtle.Turtle(visible=False)
+stripe.pensize(1)
+stripe.left(175)
+stripe.backward(175)
+
+# creating random (x, y) location and sending turtle there
+stripe=turtle.Turtle(visible=False)
+stripe.up()
+x=random.randint(-300,300)
+y=random.randint(-300,300)
+stripe.goto(x,y)
+stripe.pensize(2)
+stripe.color(0, 0, 0)
+stripe.down()
+stripe.left(190)
+stripe.backward(180)
+
+# creating random (x, y) location and sending turtle there
+stripe=turtle.Turtle(visible=False)
+stripe.up()
+x=random.randint(-300,300)
+y=random.randint(-300,300)
+stripe.goto(x,y)
+stripe.pensize(2)
+stripe.color(0, 0, 0)
+stripe.down()
+stripe.left(200)
+stripe.backward(250)
+
+# creating random (x, y) location and sending turtle there
+stripe=turtle.Turtle(visible=False)
+stripe.up()
+x=random.randint(-300,300)
+y=random.randint(-300,300)
+stripe.goto(x,y)
+stripe.pensize(2)
+stripe.color(39, 125, 161)
+stripe.down()
+stripe.left(300)
+stripe.backward(300)
+
+# creating random (x, y) location and sending turtle there
+stripe=turtle.Turtle(visible=False)
+stripe.up()
+x=random.randint(-300,300)
+y=random.randint(-300,300)
+stripe.goto(x,y)
+stripe.pensize(2)
+stripe.color(39, 125, 161)
+stripe.down()
+stripe.left(200)
+stripe.backward(200)
+
+# creating random (x, y) location and sending turtle there
+stripe=turtle.Turtle(visible=False)
+stripe.up()
+x=random.randint(-300,300)
+y=random.randint(-300,300)
+stripe.goto(x,y)
+stripe.pensize(2)
+stripe.color(39, 125, 161)
+stripe.down()
+stripe.left(160)
+stripe.backward(150)
+
+# creating random (x, y) location and sending turtle there
+circle_=turtle.Turtle(visible=False)
+circle_.up()
+x=random.randint(-300,300)
+y=random.randint(-300,300)
+circle_.goto(x,y)
+circle_.pensize(25)
+circle_.color(0, 0, 0)
+circle_.down()
+circle_.circle(400)
+
+
+
+#======= Clean up, required to run properly ======
+turtle.done() # nothing should come after this line of code!
